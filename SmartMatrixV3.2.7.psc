@@ -10,7 +10,7 @@ Funcion sumar_matrices
 	
 	Escribir "--------------------SUMA DE MATRICES--------------------"
 	Escribir ""
-	Escribir "Ingrese el nº de filas y columnas de las matrices (NxM):"
+	Escribir "Ingrese el nÂº de filas y columnas de las matrices (NxM):"
 	Escribir " [N]: "
 	N = ComprobarDimension(X)
 	Escribir " [M]: "
@@ -58,9 +58,9 @@ Funcion multiplicar_matrices
 	Definir sum, X como Real
 	sum = 0
 
-	Escribir "------------------ MULTIPLICACIÓN DE MATRICES ------------------"
+	Escribir "------------------ MULTIPLICACIÃ“N DE MATRICES ------------------"
 	Escribir ""
-	Escribir " Ingrese el nº de filas y columnas de la matriz A (NxR):"
+	Escribir " Ingrese el nÂº de filas y columnas de la matriz A (NxR):"
 	Escribir " [N]: "
 	N = ComprobarDimension(X)
 	Escribir ""
@@ -68,7 +68,7 @@ Funcion multiplicar_matrices
 	R = ComprobarDimension(X)
 	Escribir ""
 	Escribir " SE ASUME QUE EL NUMERO DE FILAS DE LA MATRIZ B ES IGUAL Al NUMERO DE COLUMNAS R DE LA MATRIZ A, PARA QUE EXISTA EL PRODUCTO DE MATRICES"
-	Escribir " Ingrese el nº de columnas de la matriz B (RxM): "
+	Escribir " Ingrese el nÂº de columnas de la matriz B (RxM): "
 	Escribir " [M]: "
 	M = ComprobarDimension(X)
 	Escribir ""
@@ -120,7 +120,7 @@ Funcion trasponer_matrices
 	
 	Escribir "------------------- TRASPONER MATRICES -------------------"	
 	Escribir ""
-	Escribir "Ingrese el nº de filas y columnas de la matriz  N = " Sin Saltar
+	Escribir "Ingrese el nÂº de filas y columnas de la matriz  N = " Sin Saltar
 	N = ComprobarDimension(X)
 	Escribir ""
 	Definir A Como Real
@@ -234,21 +234,21 @@ Funcion det = determinante(matriz,n)
 		Dimension smatriz[n-1,n-1]
 		
 		Escribir ""
-		Para k = 1 Hasta n Hacer						// Recorrido de columnas mediante el índice k  dese 1 hasta n
+		Para k = 1 Hasta n Hacer						// Recorrido de columnas mediante el Ã­ndice k  dese 1 hasta n
 			Escribir "Menor del elemento [1,",k,"] :", " Submatriz de orden:  ", n-1		// Armado de una nueva submatriz eliminando la fila 1 y la columna k
 			Para i = 2 Hasta n Hacer  				// Recorrido de filas desde la 2 hasta n
 				
-				q = 1									// Nuevo índice de columnas para la nueva submatriz.
+				q = 1									// Nuevo Ã­ndice de columnas para la nueva submatriz.
 				Para j = 1 Hasta n Hacer				// Recorrido de columnas originales
-					Si j <> k Entonces					// Se ingresa a menos que sean iguales. Sí son iguales se omite la columna , continuando  el ciclo de j hasta n.
-						smatriz[i-1, q] = matriz[i,j] 	// Armado de la submatriz, retitulando índices a partir de los originales.
+					Si j <> k Entonces					// Se ingresa a menos que sean iguales. SÃ­ son iguales se omite la columna , continuando  el ciclo de j hasta n.
+						smatriz[i-1, q] = matriz[i,j] 	// Armado de la submatriz, retitulando Ã­ndices a partir de los originales.
 						q = q + 1						// Columna siguiente de la submatriz.
 					FinSi
 				FinPara
 			FinPara
-			// Impresión de Submatriz de orden: n-1
+			// ImpresiÃ³n de Submatriz de orden: n-1
 			Escribir ""
-			Para i = 1 Hasta n-1 Hacer				//Retoma índices convencionales
+			Para i = 1 Hasta n-1 Hacer				//Retoma Ã­ndices convencionales
 				Para j = 1 Hasta n-1 Hacer
 					Escribir "        ", "s[",i, j,"]"," = ",  smatriz[i,j]  Sin Saltar		// s[i,j] elementos de la submatriz n-1
 					
@@ -256,7 +256,7 @@ Funcion det = determinante(matriz,n)
 				Escribir ""
 			FinPara
 			Escribir ""
-			det = det + matriz[1, k] * (-1)^(k+1) * Determinante(smatriz, n-1)   // LLamada Recursiva a la función Determinante() 
+			det = det + matriz[1, k] * (-1)^(k+1) * Determinante(smatriz, n-1)   // LLamada Recursiva a la funciÃ³n Determinante() 
 			// con argumento = submatriz de orden n-1.
 		FinPara
 	FinSi
@@ -271,7 +271,7 @@ Funcion num = ComprobarDimension(prueba por referencia)
 		flag = 1
 		decimal = prueba - trunc(prueba)
 		Si decimal > 0 Entonces
-			Escribir "Ingrese un número Entero, sin decimales"
+			Escribir "Ingrese un nÃºmero Entero, sin decimales"
 			flag = 0
 		SiNo
 			Si prueba <= 0 Entonces
@@ -295,16 +295,16 @@ Funcion graficar
 		Escribir ""
 		Escribir "                                                             [2]  Lineal"
 		Escribir ""
-		Escribir "                                                             [3]  Cuadrática"
+		Escribir "                                                             [3]  CuadrÃ¡tica"
 		Escribir ""
 		Escribir "                                                             [4]  Exponencial"
 		Escribir ""
-		Escribir "                                                             [0]  Para retornar a Menú Principal"
+		Escribir "                                                             [0]  Para retornar a MenÃº Principal"
 		Escribir ""
 		Escribir ""
 		Escribir " ********************************************************************************************************************************************* "
 		Escribir ""
-		Escribir "         Ingrese el tipo de función: " Sin Saltar
+		Escribir "         Ingrese el tipo de funciÃ³n: " Sin Saltar
 		Leer opcion
 		Borrar pantalla
 		Segun opcion Hacer
@@ -329,14 +329,14 @@ Funcion GraficarFuncionLineal
 	AY = AX/3
     Dimension grafica[AY+1, AX+1]  
 	
-    // Pedir al usuario la pendiente (m) y la intersección (b)
-	Escribir " ---------------------- FUNCIÓN LINEAL ----------------------"
+    // Pedir al usuario la pendiente (m) y la intersecciÃ³n (b)
+	Escribir " ---------------------- FUNCIÃ“N LINEAL ----------------------"
 	Escribir " "
-	Escribir "Expresión General: F(x) = mx + b "
+	Escribir "ExpresiÃ³n General: F(x) = mx + b "
 	Escribir " "
     Escribir "Introduzca el valor de la pendiente (m): "
     Leer m
-    Escribir "Introduzca el valor de la intersección con el eje Y (b): "
+    Escribir "Introduzca el valor de la intersecciÃ³n con el eje Y (b): "
     Leer b
 	m = m/3
 	b = b/3
@@ -359,7 +359,7 @@ Funcion GraficarFuncionLineal
 	
 	Para j <- 1 Hasta AX+1 Hacer
       
-        fx<- m*(j-(AX/2+1)) + b // Calcular Y en base a la ecuación lineal
+        fx<- m*(j-(AX/2+1)) + b // Calcular Y en base a la ecuaciÃ³n lineal
 		//i <- Redon(-fx + AY/2+2 ) // Escalar y centrar el valor de Y
         i<- Redon(-fx+AY/2+1)
 		
@@ -383,7 +383,7 @@ Funcion GraficarFuncionLineal
 		Escribir "                                  Iy : ( 0 ; 0 )"
 	SiNo
 		Si m = 0 Entonces
-			Escribir "                                  La pendiente es 0, la función es una constante por lo que no tiene intersección con el eje X"
+			Escribir "                                  La pendiente es 0, la funciÃ³n es una constante por lo que no tiene intersecciÃ³n con el eje X"
 			Escribir "                                  Iy = ( 0 ; ", b*3," )"
 		Sino 
 			X0 = -Trunc(b*100/m)/100
@@ -407,9 +407,9 @@ Funcion GraficarFuncionCuadratica
 	AY = AX/3
 	Factor_escala = 10
     Dimension grafica[AY+1, AX+1]  
-	Escribir " -------------------- FUNCIÓN CUADRÁTICA --------------------"
-    // Pedir al usuario los coeficientes de la ecuación cuadrática
-	Escribir "Expresión General: F(x) = ax^2 + bx + c "
+	Escribir " -------------------- FUNCIÃ“N CUADRÃTICA --------------------"
+    // Pedir al usuario los coeficientes de la ecuaciÃ³n cuadrÃ¡tica
+	Escribir "ExpresiÃ³n General: F(x) = ax^2 + bx + c "
 	Escribir " "
 	Repetir
 		Escribir "Introduce el valor de a: "
@@ -444,10 +444,10 @@ Funcion GraficarFuncionCuadratica
         grafica[AY/2+1, j] <- "-" // Eje X
     FinPara
 	
-    // Llenar la función cuadrática Y = aX^2 + bX + c
+    // Llenar la funciÃ³n cuadrÃ¡tica Y = aX^2 + bX + c
     Para j <- 1 Hasta AX+1 Hacer
         x = (j - (AX/2+1)) // Ajustar el valor de X al rango [-20, 20]
-        fx = a * x * x + b * x + c // Calcular Y en base a la ecuación cuadrática
+        fx = a * x * x + b * x + c // Calcular Y en base a la ecuaciÃ³n cuadrÃ¡tica
         i = Redon (-fx + AY/2+1)// Escalar y centrar el valor de Y
 		
         Si i >= 1 y i <= AY Entonces
@@ -465,23 +465,23 @@ Funcion GraficarFuncionCuadratica
 	
 	Escribir ""
 	Si a > 0 Entonces
-		Escribir "El vértice corresponde a un Mínimo Absoluto"
+		Escribir "El vÃ©rtice corresponde a un MÃ­nimo Absoluto"
 	SiNo
-		Escribir "El vértice corresponde a un Máximo Absoluto"
+		Escribir "El vÃ©rtice corresponde a un MÃ¡ximo Absoluto"
 	FinSi
 	
-	a = a * Factor_escala		// Para retornar a valores originales y dar en forma correcta las coordenadas del vertica y posteriormente las raíces X1 y X2
+	a = a * Factor_escala		// Para retornar a valores originales y dar en forma correcta las coordenadas del vertica y posteriormente las raÃ­ces X1 y X2
 	b= b * Factor_escala
 	c= c * Factor_escala
 	Xv = -Trunc((b*100)/(2*a))/100
 	Yv = c + Trunc( -((b*b)/(4*a))*100)/100 
-	Escribir "Coordenadas del vertice de la parábola (Xv;Yv): " Sin Saltar
+	Escribir "Coordenadas del vertice de la parÃ¡bola (Xv;Yv): " Sin Saltar
 	Escribir "( ", Xv, " ; ", Yv, ") "
 	
 	R = b*b-4*a*c
 	
 	Si R<0 Entonces
-		Escribir "La función cuadrática no corta el eje de abscisas, por lo tanto no cuenta con raíces reales."
+		Escribir "La funciÃ³n cuadrÃ¡tica no corta el eje de abscisas, por lo tanto no cuenta con raÃ­ces reales."
 		Escribir ""
 		Escribir "Presione cualquier tecla para continuar"
 		Esperar tecla
@@ -511,15 +511,15 @@ Funcion graficar_seno
 	Definir grafica Como Caracter
 	Definir angulo, seno, escala , DEF , Amplitud Como Real
 	Definir AA Como Entero
-	AA = 20			// Amplitud de la función trigonométrica.
+	AA = 20			// Amplitud de la funciÃ³n trigonomÃ©trica.
 	Definir i, j,n Como Entero
 	Definir AX, AY  Como Entero
 	AX = 120		//(Rango-1) de eje x
 	AY = 40			// (Rango-1) de eje y
 	
-	Escribir " ------------------------ FUNCIÓN SENO ------------------------"
+	Escribir " ------------------------ FUNCIÃ“N SENO ------------------------"
 	Escribir ""
-	Dimension grafica[AY+1,AX+1] // Se dimensiona el tamaño de la "pantalla" o campo de graficación [y(x);x]
+	Dimension grafica[AY+1,AX+1] // Se dimensiona el tamaÃ±o de la "pantalla" o campo de graficaciÃ³n [y(x);x]
 	Para i <- 1 Hasta AY+1 Hacer
 		Para j <- 1 Hasta AX+1 Hacer
 			grafica[i, j] <- "."
@@ -535,34 +535,34 @@ Funcion graficar_seno
 		grafica[(AY/2)+1, j] <- "-" // A medio recorrido del eje y se grafica el Eje X con j entre [1-61]
 	FinPara
 	Repetir
-		Escribir "Ingresar un valor entre [0 y 1] correspondiente al desfasaje inicial, como fracción de 2*PI radianes: "
+		Escribir "Ingresar un valor entre [0 y 1] correspondiente al desfasaje inicial, como fracciÃ³n de 2*PI radianes: "
 		leer DEF
 	Mientras Que DEF<0 o DEF>1
 	
-	Escribir "Ingrese el número de ciclos a visualizar"
+	Escribir "Ingrese el nÃºmero de ciclos a visualizar"
 	Leer n
-	Escribir"Ingresar la Amplitud de la senoide como porcentaje del rango máximo de la escala [0-100]"
+	Escribir"Ingresar la Amplitud de la senoide como porcentaje del rango mÃ¡ximo de la escala [0-100]"
 	leer Amplitud
 	Escribir ""
-	// Llenar la función seno
+	// Llenar la funciÃ³n seno
 	angulo = -Pi
 	Mientras (angulo >= -Pi Y angulo < Pi) Hacer
 		seno = Sen(n*angulo+DEF*2*PI)
-		i = Redon(-seno * AA*(Amplitud/100) + (AY/2) +1) // Escalar el seno y centrar en la gráfica
-		j = Redon((angulo + Pi) / (2 * Pi) * AX + 1)	// La función Redon torna enteros a los índices
+		i = Redon(-seno * AA*(Amplitud/100) + (AY/2) +1) // Escalar el seno y centrar en la grÃ¡fica
+		j = Redon((angulo + Pi) / (2 * Pi) * AX + 1)	// La funciÃ³n Redon torna enteros a los Ã­ndices
 		grafica[i, j] = "*"
-		angulo = angulo + 2*Pi/(40*n)		// A medida que se requiere visualizar mayor número de ciclos, se reduce el incremento para tomar mayor número de muestras.
+		angulo = angulo + 2*Pi/(40*n)		// A medida que se requiere visualizar mayor nÃºmero de ciclos, se reduce el incremento para tomar mayor nÃºmero de muestras.
 	FinMientras
 	
 	// Imprimir la matriz
 	Para i <- 1 Hasta AY+1 Hacer
 		Para j <- 1 Hasta AX+1 Hacer
-			Escribir Sin Saltar grafica[i, j]		// Representa una Imagen de I = Función(J). El Sin Saltar evita el tradicional salto de línea
+			Escribir Sin Saltar grafica[i, j]		// Representa una Imagen de I = FunciÃ³n(J). El Sin Saltar evita el tradicional salto de lÃ­nea
 		FinPara
 		Escribir ""
 	FinPara
 	Escribir ""
-	Escribir "                                      Amplitud como porcentaje de máxima escala: ", Amplitud, "%"
+	Escribir "                                      Amplitud como porcentaje de mÃ¡xima escala: ", Amplitud, "%"
 	Escribir ""
 	Escribir "                                                      Cota Superior = 1"
 	Escribir "                                                      Cota Inferior = -1"
@@ -582,10 +582,10 @@ Funcion GraficarFuncionExponencial
 	AY = AX/3
     Dimension grafica[AY+1, AX+1]  
 	
-    // Pedir al usuario la pendiente (m) y la intersección (b)
-	Escribir " ---------------------- FUNCIÓN EXPONENCIAL ----------------------"
+    // Pedir al usuario la pendiente (m) y la intersecciÃ³n (b)
+	Escribir " ---------------------- FUNCIÃ“N EXPONENCIAL ----------------------"
 	Escribir " "
-	Escribir "Expresión General: F(x) = a^x"
+	Escribir "ExpresiÃ³n General: F(x) = a^x"
 	Escribir " "
     Escribir "Introduzca un valor para la base (a) entre [0.1 - 10]: "
 	Repetir
@@ -609,7 +609,7 @@ Funcion GraficarFuncionExponencial
     FinPara
 	
 	Para j <- 1 Hasta AX+1 Hacer
-        fx<- 5*a^((j-(AX/2+1))/10) // Calcular Y en base a la ecuación 
+        fx<- 5*a^((j-(AX/2+1))/10) // Calcular Y en base a la ecuaciÃ³n 
 		//        i <- Redon(-fx + AY/2+ 1 ) // Escalar y centrar el valor de Y
         i<- Redon(-fx+AY/2+1)
 		
@@ -626,8 +626,10 @@ Funcion GraficarFuncionExponencial
         Escribir ""
     FinPara
 	Escribir ""
-	Escribir "       Intersección con el eje Y: (0 ; 1)"
-	Escribir "       Asíntota Horizontal en x = 0"
+	Escribir "       IntersecciÃ³n con el eje Y: (0 ; 1)"
+	Si a<>1 entonces 
+		Escribir "       AsÃ­ntota Horizontal en x = 0"
+	FinSi
 	Escribir " "
 	Escribir "Presione cualquier tecla para continuar"
 	Esperar tecla
@@ -641,7 +643,7 @@ Algoritmo SmartMatrix2024
 	Escribir ""
 	Escribir ""
 	Escribir ""
-	Escribir "                                                  ¡Bienvenido/a a la Calculadora SMART-MATRIX 2024!"
+	Escribir "                                                  Â¡Bienvenido/a a la Calculadora SMART-MATRIX 2024!"
 	Escribir ""                                                             
 	Escribir ""
 	Escribir ""                                                             
@@ -671,14 +673,14 @@ Algoritmo SmartMatrix2024
 		Escribir ""
 		Escribir "                                                             [4]  Determinante de una Matriz NxN"
 		Escribir ""
-		Escribir "                                                             [5]  Calculadora Gráfica"
+		Escribir "                                                             [5]  Calculadora GrÃ¡fica"
 		Escribir ""
 		Escribir "                                                             [0]  Finalizar"
 		Escribir ""
 		Escribir ""
 		Escribir " *********************************************************************************************************************************************"
 		Escribir ""
-		Escribir "         Seleccione la opción deseada: " Sin Saltar
+		Escribir "         Seleccione la opciÃ³n deseada: " Sin Saltar
 		Leer opcion
 		Borrar Pantalla
 		Si opcion <> 0 Entonces
